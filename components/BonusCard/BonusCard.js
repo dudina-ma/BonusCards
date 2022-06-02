@@ -14,19 +14,19 @@ export default function BonusCard(props) {
 						className="mb-2 text-muted"
 						tag="h6"
 					>
-						{props.card.holder ? "Holder: " + props.card.holder : ""}
+						{props.card.holder ? "Владелец карты: " + props.card.holder : ""}
 					</CardSubtitle>
 					<CardText>
-						<div className="card-field">{props.card.email ? "Email: " + props.card.email : ""}</div>
-						<div className="card-field">{props.card.phone ? "Phone: " + props.card.phone : ""}</div>
-						<div className="card-field">{props.card.birthdate ? "Birthdate: " + props.card.birthdate : ""}</div>
-						<div className="card-field">{props.card.created_date ? "Created_date: " + props.card.created_date : ""}</div>
-						<div className="card-field">{props.card.status ? "Status: " + props.card.status : ""}</div>
-						<div className="card-field">{props.card.sales ? "Sales: " + props.card.sales : ""}</div>
-						<div className="card-field">{props.card.balance ? "Balance: " + props.card.balance : ""}</div>
+						<p className="card-field">{props.card.email ? "Email: " + props.card.email : ""}</p>
+						<p className="card-field">{props.card.phone ? "Телефон: " + props.card.phone : ""}</p>
+						<p className="card-field">{props.card.birthdate ? "Дата рождения: " + props.card.birthdate : ""}</p>
+						<p className="card-field">{props.card.created_date ? "Дата создания карты: " + props.card.created_date : ""}</p>
+						<p className="card-field">{props.card.status ? "Статус: " + props.card.status : ""}</p>
+						<p className="card-field">{props.card.sales ? "Сумма продаж: " + props.card.sales : ""}</p>
+						<p className="card-field">{props.card.balance ? "Текущий баланс: " + props.card.balance : ""}</p>
 					</CardText>
 					<Button tag="a" href="/ggg" className="get-transactions-btn">
-						Get card transactions
+						Получить транзакции по карте
 					</Button>
 				</CardBody>
 			</Card>
