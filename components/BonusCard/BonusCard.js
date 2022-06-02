@@ -9,7 +9,7 @@ export default function BonusCard(props) {
 			<Card>
 				<CardBody>
 					<CardTitle tag="h5">
-						{props.card.number}
+						{props.card.number ?? ""}
 					</CardTitle>
 					<CardSubtitle
 						className="mb-2 text-muted"
