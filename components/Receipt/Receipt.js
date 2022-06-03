@@ -3,15 +3,15 @@ import './Receipt.less';
 import { Card, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 import getDate from "../../helpers/getDate";
 
-export default function Reciept(props) {
+export default function Receipt(props) {
 	return (
-		<div key={props.receipt.uuid} className="reciept">
+		<div key={props.receipt.uuid} className="receipt">
 			<Card>
 				<CardBody>
 				<CardTitle tag="h5">
 						{props.receipt.number ?? ""}
 					</CardTitle>
-					<CardText>
+					<CardText tag="div">
 						<div className="receipt-field">{props.receipt.period ? "Дата чека: " + getDate(props.receipt.period) : ""}</div>
 						<div className="receipt-field">{props.receipt.total ? "Сумма чека без учета скидок и оплат бонусами: " + props.receipt.total : ""}</div>
 						<div className="receipt-field">{props.receipt.totalWithDiscount ? "Итог чека с учетом скидок и оплат бонусами: " + props.receipt.totalWithDiscount : ""}</div>

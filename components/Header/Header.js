@@ -9,13 +9,13 @@ export default function Header() {
 				<NavItem>
 					<NavLink
 						active
-						href="#"
+						href="/"
 					>
 						Карты
 					</NavLink>
 				</NavItem>
 				<NavItem>
-					<NavLink href="#">
+					<NavLink href="/receipts">
 						Чеки
 					</NavLink>
 				</NavItem>
