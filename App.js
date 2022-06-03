@@ -1,6 +1,6 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import BonusCardList from './Components/BonusCardList/BonusCardList';
+import { Routes, Route } from 'react-router-dom';
+import BonusCardList from './components/BonusCardList/BonusCardList';
 import Header from './components/Header/Header';
 import ReceiptList from './components/ReceiptList/ReceiptList';
 
