@@ -1,14 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import BonusCardList from './components/BonusCardList/BonusCardList';
+import Header from './components/Header/Header';
+import ReceiptList from './components/ReceiptList/ReceiptList';
+import { Container } from 'reactstrap';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<App />
+			<Container>
+				<Header />
+				<Routes>
+					<Route path="/" element={<BonusCardList />} />
+					<Route path="/receipts" element={<ReceiptList />} />
+				</Routes>
+			</Container>
 		</BrowserRouter>
 	</React.StrictMode>
 );
