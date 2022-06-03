@@ -1,5 +1,5 @@
 import React from "react";
-import Reciept from "../Receipt/Receipt";
+import Receipt from "../Receipt/Receipt";
 import './ReceiptList.less';
 
 export default function ReceiptList() {
@@ -81,13 +81,5 @@ export default function ReceiptList() {
 		}
 	];
 
-
-	const receiptDivs = [];
-
-	for (let i = 0; i < receipts.length; i++) {
-		receiptDivs.push(<Reciept receipt={receipts[i]} />);
-	}
-
-	return receiptDivs;
-
+	return receipts.map((receipt) => <Receipt key={receipt.uuid} receipt={receipt} />);
 }

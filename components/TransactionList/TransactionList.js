@@ -66,12 +66,5 @@ export default function TransactionList() {
 		}
 	];
 
-	const transactionDivs = [];
-
-	for (let i = 0; i < transactions.length; i++) {
-		transactionDivs.push(<Transaction transaction={transactions[i]} />);
-	}
-
-	return transactionDivs;
-
+	return transactions.map((transaction) => <Transaction key={transaction.uuid} transaction={transaction} />);
 }

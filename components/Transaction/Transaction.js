@@ -14,7 +14,7 @@ export default function Transaction(props) {
 					>
 						{props.transaction.delta ? "Сумма транзакции: " + props.transaction.delta : ""}
 					</CardSubtitle>
-					<CardText>
+					<CardText tag="div">
 						<div className="transaction-field">{props.transaction.period ? "Дата транзакции: " + getDate(props.transaction.period) : ""}</div>
 						<div className="transaction-field">{props.transaction.comment ? "Комментарий: " + props.transaction.comment : ""}</div>
 					</CardText>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './BonusCard.less';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
 import getDate from "../../helpers/getDate";
@@ -17,7 +17,7 @@ export default function BonusCard(props) {
 					>
 						{props.card.holder ? "Владелец карты: " + props.card.holder : ""}
 					</CardSubtitle>
-					<CardText>
+					<CardText tag='div'>
 						<p className="card-field">{props.card.email ? "Email: " + props.card.email : ""}</p>
 						<p className="card-field">{props.card.phone ? "Телефон: " + props.card.phone : ""}</p>
 						<p className="card-field">{props.card.birthdate ? "Дата рождения: " + props.card.birthdate : ""}</p>
