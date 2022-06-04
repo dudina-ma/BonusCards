@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BonusCardList from './components/BonusCardList/BonusCardList';
 import Header from './components/Header/Header';
 import ReceiptList from './components/ReceiptList/ReceiptList';
+import TransactionList from './components/TransactionList/TransactionList';
 import { Container } from 'reactstrap';
 
 
@@ -17,6 +18,7 @@ root.render(
 				<Routes>
 					<Route path="/" element={<BonusCardList />} />
 					<Route path="/receipts" element={<ReceiptList />} />
+					<Route path="/transactions" element={<TransactionList />} />
 				</Routes>
 			</Container>
 		</BrowserRouter>

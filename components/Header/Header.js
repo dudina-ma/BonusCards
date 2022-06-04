@@ -25,6 +25,15 @@ export default function Header() {
 						Чеки
 					</NavLink>
 				</NavItem>
+				<NavItem>
+					<NavLink
+						tag={RRNavLink}
+						to="/transactions"
+						activeClassName="active"
+					>
+						Транзакции
+					</NavLink>
+				</NavItem>
 			</Nav>
 		</div>
 	)
