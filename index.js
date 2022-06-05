@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import BonusCardList from './components/BonusCardList/BonusCardList';
+import BonusCardsPage from './components/BonusCardsPage/BonusCardsPage';
 import Header from './components/Header/Header';
-import ReceiptList from './components/ReceiptList/ReceiptList';
+import ReceiptsPage from './components/ReceiptsPage/ReceiptsPage';
 import TransactionsPage from './components/TransactionsPage/TransactionsPage';
 import { Container } from 'reactstrap';
 
@@ -16,8 +16,8 @@ root.render(
 			<Container>
 				<Header />
 				<Routes>
-					<Route path="/" element={<BonusCardList />} />
-					<Route path="/receipts" element={<ReceiptList />} />
+					<Route path="/" element={<BonusCardsPage />} />
+					<Route path="/receipts" element={<ReceiptsPage />} />
 					<Route path="/transactions" element={<TransactionsPage />} />
 				</Routes>
 			</Container>

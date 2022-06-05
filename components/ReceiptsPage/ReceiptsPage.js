@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Receipt from "../Receipt/Receipt";
-import './ReceiptList.less';
+import './ReceiptsPage.less';
 import { getReceipts } from '../../helpers/api';
 
-export default function ReceiptList() {
+export default function ReceiptsPage() {
 	const [receipts, setReceipts] = useState([]);
 
 	useEffect(() => { getReceipts().then(setReceipts) }, []);

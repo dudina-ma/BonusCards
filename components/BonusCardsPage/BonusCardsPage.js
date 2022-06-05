@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import BonusCard from "../BonusCard/BonusCard";
-import './BonusCardList.less';
+import './BonusCardsPage.less';
 import { getCards } from '../../helpers/api';
 
-export default function BonusCardList() {
+export default function BonusCardsPage() {
 	const [cards, setCards] = useState([]);
 
 	useEffect(() => { getCards().then(setCards) }, []);
