@@ -4,6 +4,7 @@ import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import { getCards } from '../../helpers/api';
 import { getTransactions } from '../../helpers/api';
 import TransactionList from "../TransactionList/TransactionList";
+import getMsFromDateString from "../../helpers/getMsFromDateString";
 
 export default function TransactionsPage() {
 	const [cards, setCards] = useState(null);
@@ -41,8 +42,8 @@ export default function TransactionsPage() {
 
 	function onTransactionListFormSubmited(event) {
 		event.preventDefault();
-		const dateFromParam = dateFrom || 0;
-		const dateToParam = dateTo;
+		const dateFromParam = getMsFromDateString(dateFrom) || 0;
+		const dateToParam = getMsFromDateString(dateTo) || "";
 		const cardUuidParam = cardUuid;
 		getTransactions(dateFromParam, dateToParam, cardUuidParam).then(setTransactions);
 	}
