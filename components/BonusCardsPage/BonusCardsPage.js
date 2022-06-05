@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import BonusCard from "../BonusCard/BonusCard";
-import './BonusCardsPage.less';
 import { getCards } from '../../helpers/api';
 
 export default function BonusCardsPage() {

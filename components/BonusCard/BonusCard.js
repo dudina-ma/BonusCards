@@ -26,9 +26,6 @@ export default function BonusCard(props) {
 						<p className="card-field">{props.card.sales ? "Сумма продаж: " + props.card.sales : ""}</p>
 						<p className="card-field">{props.card.balance ? "Текущий баланс: " + props.card.balance : ""}</p>
 					</CardText>
-					<Button tag="a" href="/ggg" className="get-transactions-btn">
-						Получить транзакции по карте
-					</Button>
 				</CardBody>
 			</Card>
 		</div>

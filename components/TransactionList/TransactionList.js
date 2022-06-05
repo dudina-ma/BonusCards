@@ -1,5 +1,4 @@
 import React from "react";
-import './TransactionList.less';
 import { Alert } from 'reactstrap';
 import Transaction from "../Transaction/Transaction";
 
