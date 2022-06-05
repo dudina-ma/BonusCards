@@ -11,7 +11,7 @@ export default function TransactionsPage() {
 	const [dateFrom, setDateFrom] = useState("");
 	const [dateTo, setDateTo] = useState("");
 	const [cardUuid, setCardUuid] = useState(null);
-	const [transactions, setTransactions] = useState([]);
+	const [transactions, setTransactions] = useState(null);
 
 	useEffect(() => {
 		getCards().then(cards => {
@@ -93,7 +93,7 @@ export default function TransactionsPage() {
 					Получить транзакции
 				</Button>
 			</Form>
-			{transactions.length === 0 ? "" : <TransactionList transactions={transactions}/>}
+			{transactions != null && <TransactionList transactions={transactions} />}
 		</>
 	)
 };
