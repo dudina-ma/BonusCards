@@ -9,8 +9,10 @@ export function getCards() {
 	}).then(response => response.json());
 };
 
-export function getReceipts() {
-	return fetch('https://bonus-test.evoapp.ru/api/3rdparty/receipt?from=0', {
+export function getReceipts(dateFrom, dateTo, cardUuid) {
+	const dateToParamString = dateTo === '' ? '' : ('&to=' + dateTo);
+	const url = 'https://bonus-test.evoapp.ru/api/3rdparty/receipt?from=' + dateFrom + dateToParamString + '&card_uuid=' + cardUuid;
+	return fetch(url, {
 			method: 'GET',
 			mode: 'cors',
 			headers: {
@@ -21,8 +23,8 @@ export function getReceipts() {
 };
 
 export function getTransactions(dateFrom, dateTo, cardUuid) {
-	const dateToParamString = dateTo === "" ? "" : ("&to=" + dateTo);
-	const url = "https://bonus-test.evoapp.ru/api/3rdparty/transaction?from=" + dateFrom + dateToParamString + "&card_uuid=" + cardUuid;
+	const dateToParamString = dateTo === '' ? '' : ('&to=' + dateTo);
+	const url = 'https://bonus-test.evoapp.ru/api/3rdparty/transaction?from=' + dateFrom + dateToParamString + '&card_uuid=' + cardUuid;
 	return fetch(url, {
 			method: 'GET',
 			mode: 'cors',
