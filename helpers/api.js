@@ -11,7 +11,7 @@ export function getCards() {
 
 export function getReceipts(dateFrom, dateTo, cardUuid) {
 	const dateToParamString = dateTo === '' ? '' : ('&to=' + dateTo);
-	const url = 'https://bonus-test.evoapp.ru/api/3rdparty/receipt?from=' + dateFrom + dateToParamString + (cardUuid === 'all-cards' ? "" : '&cardUuid=' + cardUuid);
+	const url = 'https://bonus-test.evoapp.ru/api/3rdparty/receipt?from=' + dateFrom + dateToParamString + (cardUuid == null ? "" : '&cardUuid=' + cardUuid);
 	return fetch(url, {
 			method: 'GET',
 			mode: 'cors',

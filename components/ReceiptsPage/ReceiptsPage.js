@@ -26,7 +26,7 @@ export default function ReceiptsPage() {
 	}
 
 	const cardNumbersOptions = cards.map((card) => <option key={card.uuid} value={card.uuid}>{card.number}</option>);
-	cardNumbersOptions.unshift(<option key={"all-cards"} value={"all-cards"}>Все карты</option>)
+	cardNumbersOptions.unshift(<option key="all-cards" value="all-cards">Все карты</option>)
 
 	function onDateFromChanged(event) {
 		setDateFrom(event.target.value);
@@ -44,7 +44,10 @@ export default function ReceiptsPage() {
 		event.preventDefault();
 		const dateFromParam = getMsFromDateString(dateFrom) || 0;
 		const dateToParam = getMsFromDateString(dateTo) || "";
-		const cardUuidParam = cardUuid;
+		let cardUuidParam = null;
+		if (cardUuid !== "all-cards") {
+			cardUuidParam = cardUuid;
+		}
 		getReceipts(dateFromParam, dateToParam, cardUuidParam).then(setReceipts);
 	}
 
