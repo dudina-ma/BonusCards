@@ -5,22 +5,22 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BonusCardList from './components/BonusCardList/BonusCardList';
 import Header from './components/Header/Header';
 import ReceiptList from './components/ReceiptList/ReceiptList';
-import TransactionList from './components/TransactionList/TransactionList';
+import TransactionsPage from './components/TransactionsPage/TransactionsPage';
 import { Container } from 'reactstrap';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<React.StrictMode>
+	<React.Fragment>
 		<BrowserRouter>
 			<Container>
 				<Header />
 				<Routes>
 					<Route path="/" element={<BonusCardList />} />
 					<Route path="/receipts" element={<ReceiptList />} />
-					<Route path="/transactions" element={<TransactionList />} />
+					<Route path="/transactions" element={<TransactionsPage />} />
 				</Routes>
 			</Container>
 		</BrowserRouter>
-	</React.StrictMode>
+	</React.Fragment>
 );
