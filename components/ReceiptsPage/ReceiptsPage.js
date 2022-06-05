@@ -10,7 +10,7 @@ export default function ReceiptsPage() {
 	const [dateFrom, setDateFrom] = useState("");
 	const [dateTo, setDateTo] = useState("");
 	const [cardUuid, setCardUuid] = useState(null);
-	const [receipts, setReceipts] = useState([]);
+	const [receipts, setReceipts] = useState(null);
 
 	useEffect(() => {
 		getCards().then(cards => {
@@ -92,7 +92,7 @@ export default function ReceiptsPage() {
 					Получить чеки
 				</Button>
 			</Form>
-			{receipts.length === 0 ? "" : <ReceiptList receipts={receipts}/>}
+			{receipts != null && <ReceiptList receipts={receipts} cards={cards} />}
 		</>
 	)
 };
